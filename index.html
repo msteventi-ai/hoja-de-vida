@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currículum Vitae - Marcos Triviño</title>
+
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e8edf3;
+            color: #333;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+
+        .cv-container {
+            max-width: 950px;
+            margin: auto;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ENCABEZADO */
+
+        .header {
+            background-color: #142c46;
+            color: white;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-photo {
+            width: 145px;
+            height: 165px;
+            object-fit: cover;
+            border: 4px solid #b4d8f3;
+            border-radius: 8px;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .header-info .subtitle {
+            color: #b4d8f3;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin: 0 0 10px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin: 0 0 10px;
+        }
+
+        .header p {
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .university {
+            color: #b4d8f3;
+        }
+
+        /* DISTRIBUCIÓN DE COLUMNAS */
+
+        .cv-body {
+            display: flex;
+        }
+
+        /* COLUMNA IZQUIERDA */
+
+        .left-column {
+            width: 33%;
+            background-color: #203c59;
+            color: white;
+            padding: 25px;
+            overflow-wrap: anywhere;
+        }
+
+        .sidebar-title {
+            color: #b4d8f3;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #54738e;
+            padding-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        .sidebar-title:first-child {
+            margin-top: 0;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .contact-info strong {
+            color: #b4d8f3;
+        }
+
+        .skills-list {
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        /* ETIQUETAS DE CONOCIMIENTOS */
+
+        .technology {
+            display: inline-block;
+            background-color: #345573;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 5px;
+            font-size: 13px;
+            margin: 4px 2px;
+        }
+
+        .technology:hover {
+            background-color: #477ca5;
+        }
+
+        /* COLUMNA DERECHA */
+
+        .right-column {
+            width: 67%;
+            padding: 30px;
+        }
+
+        .section-title {
+            color: #142c46;
+            font-size: 21px;
+            border-left: 5px solid #3e81b5;
+            padding-left: 12px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* FORMACIÓN ACADÉMICA */
+
+        .education {
+            border-left: 2px solid #d6e3ef;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .education h3 {
+            color: #203c59;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        .education p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .period {
+            color: #527b9d;
+            font-weight: bold;
+        }
+
+        /* INFORMACIÓN PERSONAL */
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .info-table td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #e8edf3;
+        }
+
+        .info-table td:first-child {
+            color: #203c59;
+            font-weight: bold;
+            width: 40%;
+        }
+
+        /* PROYECTOS ACADÉMICOS */
+
+        .project {
+            background-color: #f3f7fb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border-left: 3px solid #3e81b5;
+        }
+
+        .project h3 {
+            color: #203c59;
+            font-size: 15px;
+            margin: 0 0 8px;
+        }
+
+        .project p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* PIE DE PÁGINA */
+
+        .footer {
+            background-color: #142c46;
+            color: #d6e3ef;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* BOTÓN PARA IMPRIMIR */
+
+        .print-button {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 25px;
+            background-color: #203c59;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #3e81b5;
+        }
+
+        /* ADAPTACIÓN PARA CELULARES */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 25px;
+            }
+
+            .cv-body {
+                flex-direction: column;
+            }
+
+            .left-column,
+            .right-column {
+                width: 100%;
+            }
+
+            .right-column {
+                padding: 20px;
+            }
+        }
+
+        /* CONFIGURACIÓN PARA IMPRIMIR */
+
+        @media print {
+
+            body {
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            .header {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .cv-body {
+                flex-direction: row;
+            }
+
+            .left-column {
+                width: 33%;
+            }
+
+            .right-column {
+                width: 67%;
+            }
+
+            .project,
+            .education {
+                break-inside: avoid;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cv-container">
+
+        <!-- ENCABEZADO PRINCIPAL -->
+
+        <header class="header">
+
+            <img src="img-cv/FOTO PERFIL.jpg"
+                 alt="Fotografía de perfil"
+                 class="profile-photo">
+
+            <div class="header-info">
+
+                <p class="subtitle">CURRÍCULUM VITAE</p>
+
+                <h1>Marcos Steven Triviño Inca</h1>
+
+                <p>Estudiante de Ingeniería en Sistemas de la Información</p>
+
+                <p class="university">Universidad de Guayaquil</p>
+
+            </div>
+
+        </header>
+
+        <div class="cv-body">
+
+            <!-- COLUMNA IZQUIERDA -->
+
+            <aside class="left-column">
+
+                <h2 class="sidebar-title">Contacto</h2>
+
+                <div class="contact-info">
+
+                    <p>
+                        <strong>Correo electrónico:</strong><br>
+                        marcos.trivinoi@ug.edu.ec
+                    </p>
+
+                    <p>
+                        <strong>Ubicación:</strong><br>
+                        Guayaquil, Ecuador
+                    </p>
+
+                </div>
+
+                <h2 class="sidebar-title">Conocimientos técnicos</h2>
+
+                <ul class="skills-list">
+                    <li>Programación orientada a objetos</li>
+                    <li>Administración de bases de datos</li>
+                    <li>Desarrollo web básico</li>
+                    <li>Manejo de herramientas informáticas</li>
+                    <li>Fundamentos de ingeniería de software</li>
+                </ul>
+
+                <h2 class="sidebar-title">Tecnologías</h2>
+
+                <span class="technology">Java</span>
+                <span class="technology">Python</span>
+                <span class="technology">HTML</span>
+                <span class="technology">CSS</span>
+                <span class="technology">SQL</span>
+                <span class="technology">PostgreSQL</span>
+                <span class="technology">Git</span>
+                <span class="technology">VS Code</span>
+
+                <h2 class="sidebar-title">Habilidades personales</h2>
+
+                <ul class="skills-list">
+                    <li>Trabajo en equipo</li>
+                    <li>Responsabilidad</li>
+                    <li>Buena comunicación</li>
+                    <li>Adaptabilidad</li>
+                    <li>Aprendizaje continuo</li>
+                    <li>Resolución de problemas</li>
+                </ul>
+
+                <h2 class="sidebar-title">Idiomas</h2>
+                <ul class="skills-list">
+                    <li>Español - Nativo</li>
+                    <li>Ingles - Básico</li>
+            
+                </ul>
+            </aside>
+
+            <!-- COLUMNA DERECHA -->
+
+            <main class="right-column">
+
+                <!-- PERFIL PROFESIONAL -->
+
+                <section class="section">
+
+                    <h2 class="section-title">Perfil profesional</h2>
+
+                    <p class="description">
+                        Soy estudiante de Ingeniería en Sistemas de la
+                        Información, interesado en el desarrollo de software,
+                        la administración de bases de datos y las tecnologías
+                        de la información. Busco fortalecer mis conocimientos
+                        mediante la práctica, el trabajo en equipo y el
+                        aprendizaje continuo.
+                    </p>
+
+                </section>
+
+                <!-- INFORMACIÓN PERSONAL -->
+
+                <section class="section">
+
+                    <h2 class="section-title">Información personal</h2>
+
+                    <table class="info-table">
+
+                        <tr>
+                            <td>Nombre completo:</td>
+                            <td>Marcos Steven Triviño Inca</td>
+                        </tr>
+
+                        <tr>
+                            <td>Nacionalidad:</td>
+                            <td>Ecuatoriana</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ocupación:</td>
+                            <td>Estudiante universitario</td>
+                        </tr>
+
+                    </table>
+
+                </section>
+
+                <!-- FORMACIÓN ACADÉMICA -->
+
+                <section class="section">
+
+                    <h2 class="section-title">Formación académica</h2>
+
+                    <div class="education">
+
+                        <h3>Unidad Educativa Juan XXIII</h3>
+
+                        <p>Unidad Educativa "Juan XXIII" 2019 - 2020</p>
+
+                    </div>
+
+                    <div class="education">
+
+                        <h3>Universidad de Guayaquil</h3>
+
+                        <p>Facultad de Ingeniería Industrial</p>
+
+                        <p>Ingeniería en Sistemas de la Información</p>
+
+                        <p class="period">2024 - Actualidad</p>
+
+                        <p>Estudios universitarios en curso.</p>
+
+                    </div>
+
+                    
+
+                </section>
+
+                <!-- PROYECTOS ACADÉMICOS -->
+
+                <section class="section">
+
+                    <h2 class="section-title">Proyectos académicos</h2>
+
+                    <div class="project">
+
+                        <h3>Desarrollo de aplicaciones</h3>
+
+                        <p>
+                            Elaboración de programas de escritorio utilizando Java,
+                            aplicando estructuras de datos y fundamentos de
+                            programación.
+                        </p>
+
+                    </div>
+
+                    <div class="project">
+
+                        <h3>Administración de bases de datos</h3>
+
+                        <p>
+                            Creación de bases de datos, consultas SQL y
+                            aplicación de índices mediante PostgreSQL y pgAdmin.
+                        </p>
+
+                    </div>
+
+                    <div class="project">
+
+                        <h3>Desarrollo de páginas web</h3>
+
+                        <p>
+                            Creación de páginas web utilizando HTML y CSS,
+                            aplicando principios básicos de estructura,
+                            diseño y adaptación a diferentes pantallas.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- OBJETIVO PROFESIONAL -->
+
+                <section class="section">
+
+                    <h2 class="section-title">Objetivo profesional</h2>
+
+                    <p class="description">
+                        Aplicar los conocimientos adquiridos durante mi
+                        formación universitaria en proyectos tecnológicos,
+                        desarrollar nuevas competencias profesionales y
+                        contribuir a la solución de problemas mediante
+                        herramientas informáticas.
+                    </p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer class="footer">
+
+            <p>Marcos Steven Triviño Inca | Currículum Vitae 2026</p>
+
+            <p>Disciplina, compromiso y aprendizaje continuo.</p>
+
+        </footer>
+
+    </div>
+
+    <!-- BOTÓN PARA IMPRIMIR O GUARDAR COMO PDF -->
+
+    <button class="print-button" onclick="window.print()">
+        Imprimir / Guardar como PDF
+    </button>
+
+</body>
+</html>
